@@ -156,7 +156,7 @@ def get_n_values(enemies: str) -> int:
     if 'x' in enemies:
         real_enemies = ''.join([enemy for enemy in enemies if enemy != 'x'])
         return get_n_values(real_enemies)
-    # `n` enemies custered together each get an (n-1) bonus
+    # `n` enemies clustered together each get an (n-1) bonus
     # e.g. 2 enemies together each get +1, 3 together each get +2
     bonus = len(enemies) * (len(enemies) - 1)
     raw_value = sum([get_one_value(enemy) for enemy in enemies])
